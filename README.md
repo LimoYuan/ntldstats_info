@@ -1,22 +1,4 @@
-A library for Dart developers.
-
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
-
+# The application is a get ntldstats data
 ## Usage
-
-A simple usage example:
-
-```dart
-import 'package:ntldstats_info/ntldstats_info.dart';
-
-main() {
-  var awesome = new Awesome();
-}
-```
-
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+clone the repositories, cd project dir, run `pub get` install depends, then run `pub run cn.west/Application.dart`
+wrong: sheets name, sheets path dir.
