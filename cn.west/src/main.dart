@@ -16,7 +16,9 @@ Future App() async {
         throw FormatException("Path: $sheetPath is not found.");
     }
     // get all request pages to Elements
-    List<Element> allElements = await getElements();
+    List<Element> allElements = await getElements().catchError((onError){
+        print("Request failed, exit.");
+    });
     // get company Element
     Element companyAlibabaElement          = getCompanyInfo(allElements[0])["Company_Alibaba"];
     Element companyWestElement             = getCompanyInfo(allElements[0])["Company_West"];
@@ -61,34 +63,27 @@ Future App() async {
 Future getElements() async {
     List<Element> getElements = List();
     try {
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["Registrar"]))));
-        logs("Request Registrar page successful.");
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["Alibaba"]))));
-        logs("Request Alibaba page successful.");
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["Alibaba_Singapore"]))));
-        logs("Request Alibaba_Singapore page successful.");
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["Chengdu_West"]))));
-        logs("Request Chengdu_West page successful.");
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["West263"]))));
-        logs("Request West263 page successful.");
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["Name_Cheap"]))));
-        logs("Request Name_Cheap page successful.");
-        getElements.add(
-            getElement(getDom(await getResponse(getUrl["GoDaddy"]))));
-        logs("Request GoDaddy page successful.");
+        getElements.add(getElement(getDom(await getResponse(getUrl["Registrar"]))));
+        logs("No.1: Request Registrar page successful. \n    Url: ${getUrl["Registrar"]}");
+        getElements.add(getElement(getDom(await getResponse(getUrl["Alibaba"]))));
+        logs("No.2: Request Alibaba page successful. \n    Url: ${getUrl["Alibaba"]}");
+        getElements.add(getElement(getDom(await getResponse(getUrl["Alibaba_Singapore"]))));
+        logs("No.3: Request Alibaba_Singapore page successful. \n    Url: ${getUrl["Alibaba_Singapore"]}");
+        getElements.add(getElement(getDom(await getResponse(getUrl["Chengdu_West"]))));
+        logs("No.4: Request Chengdu_West page successful. \n    Url: ${getUrl["Chengdu_West"]}");
+        getElements.add(getElement(getDom(await getResponse(getUrl["West263"]))));
+        logs("No.5: Request West263 page successful. \n    Url: ${getUrl["West263"]}");
+        getElements.add(getElement(getDom(await getResponse(getUrl["Name_Cheap"]))));
+        logs("No.6: Request Name_Cheap page successful. \n    Url: ${getUrl["Name_Cheap"]}");
+        getElements.add(getElement(getDom(await getResponse(getUrl["GoDaddy"]))));
+        logs("No.7: Request GoDaddy page successful. \n    Url: ${getUrl["GoDaddy"]}");
     } catch (e) {
-        ErrorLogs("May be west263 link request failed.");
+        ErrorLogs("Request failed.");
     }
     if (getElements.length >= 7) {
         return getElements;
     }else {
-        ErrorLogs("Functions: getDocuments(), Documents length is Error, Length for now: ${getElements.length}, May be west263 link request failed.");
+        ErrorLogs("Functions: getDocuments(), Documents length is Error, Length for now: ${getElements.length}, Request No.${getElements.length + 1} is failed, Please wait again run it.");
     }
 }
 

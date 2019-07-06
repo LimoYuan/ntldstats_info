@@ -13,7 +13,7 @@ final Map<String, String> headers = {
 Future getResponse(String url) async {
   http.Response response;
   if(url.isNotEmpty) {
-    response = await http.get(url, headers: headers);
+    response = await http.get(url, headers: headers).timeout(const Duration(seconds: 60));
     if(response.statusCode == 200) {
       return response;
     } else {
