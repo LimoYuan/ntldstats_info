@@ -143,106 +143,105 @@ Map<String, Element> getCompanyDomainLtdData(Element element) {
     Map<String, Element> domainElement = Map();
     // remove Ads.
     ltd_elements.removeAt(10);
-    print(ltd_elements.length);
-
+//    print(ltd_elements.length);
     for (var ltd_tr = 0; ltd_tr < ltd_elements.length; ltd_tr++) {
         String ltd_Name = ltd_elements[ltd_tr].querySelectorAll("td")[2].text.trim().toString();
         // print(ltd_Name);
         switch (ltd_Name) {
             case ".top":
-                logs("Found ltd .top; location: ${ltd_tr}");
+                logs("Found ltd .top; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["top"] = ltd_elements[ltd_tr];
                 break;
             case ".xyz":
-                logs("Found ltd .xyz; location: ${ltd_tr}");
+                logs("Found ltd .xyz; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["xyz"] = ltd_elements[ltd_tr];
                 break;
             case ".club":
-                logs("Found ltd .club; location: ${ltd_tr}");
+                logs("Found ltd .club; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["club"] = ltd_elements[ltd_tr];
                 break;
             case ".site":
-                logs("Found ltd .site; location: ${ltd_tr}");
+                logs("Found ltd .site; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["site"] = ltd_elements[ltd_tr];
                 break;
             case ".loan":
-                logs("Found ltd .loan; location: ${ltd_tr}");
+                logs("Found ltd .loan; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["loan"] = ltd_elements[ltd_tr];
                 break;
             case ".online":
-                logs("Found ltd .online; location: ${ltd_tr}");
+                logs("Found ltd .online; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["online"] = ltd_elements[ltd_tr];
                 break;
             case ".vip":
-                logs("Found ltd .vip; location: ${ltd_tr}");
+                logs("Found ltd .vip; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["vip"] = ltd_elements[ltd_tr];
                 break;
             case ".fun":
-                logs("Found ltd .fun; location: ${ltd_tr}");
+                logs("Found ltd .fun; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["fun"] = ltd_elements[ltd_tr];
                 break;
             case ".wang":
-                logs("Found ltd .wang; location: ${ltd_tr}");
+                logs("Found ltd .wang; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["wang"] = ltd_elements[ltd_tr];
                 break;
             case ".men":
-                logs("Found ltd .men; location: ${ltd_tr}");
+                logs("Found ltd .men; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["men"] = ltd_elements[ltd_tr];
                 break;
             case ".app":
-                logs("Found ltd .app; location: ${ltd_tr}");
+                logs("Found ltd .app; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["app"] = ltd_elements[ltd_tr];
                 break;
             case ".date":
-                logs("Found ltd .date; location: ${ltd_tr}");
+                logs("Found ltd .date; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["date"] = ltd_elements[ltd_tr];
                 break;
             case ".tech":
-                logs("Found ltd .tech; location: ${ltd_tr}");
+                logs("Found ltd .tech; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["tech"] = ltd_elements[ltd_tr];
                 break;
             case ".win":
-                logs("Found ltd .win; location: ${ltd_tr}");
+                logs("Found ltd .win; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["win"] = ltd_elements[ltd_tr];
                 break;
             case ".ltd":
-                logs("Found ltd .ltd; location: ${ltd_tr}");
+                logs("Found ltd .ltd; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["ltd"] = ltd_elements[ltd_tr];
                 break;
             case ".work":
-                logs("Found ltd .work; location: ${ltd_tr}");
+                logs("Found ltd .work; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["work"] = ltd_elements[ltd_tr];
                 break;
             case ".website":
-                logs("Found ltd .website; location: ${ltd_tr}");
+                logs("Found ltd .website; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["website"] = ltd_elements[ltd_tr];
                 break;
             case ".cloud":
-                logs("Found ltd .cloud; location: ${ltd_tr}");
+                logs("Found ltd .cloud; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["cloud"] = ltd_elements[ltd_tr];
                 break;
             case ".bid":
-                logs("Found ltd .bid; location: ${ltd_tr}");
+                logs("Found ltd .bid; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["bid"] = ltd_elements[ltd_tr];
                 break;
             case ".shop":
-                logs("Found ltd .shop; location: ${ltd_tr}");
+                logs("Found ltd .shop; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["shop"] = ltd_elements[ltd_tr];
                 break;
             case ".store":
-                logs("Found ltd .store; location: ${ltd_tr}");
+                logs("Found ltd .store; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["store"] = ltd_elements[ltd_tr];
                 break;
             case ".ink":
-                logs("Found ltd .ink; location: ${ltd_tr}");
+                logs("Found ltd .ink; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["ink"] = ltd_elements[ltd_tr];
                 break;
             case ".xin":
-                logs("Found ltd .xin; location: ${ltd_tr}");
+                logs("Found ltd .xin; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["xin"] = ltd_elements[ltd_tr];
                 break;
             case ".icu":
-                logs("Found ltd .icu; location: ${ltd_tr}");
+                logs("Found ltd .icu; total length: ${ltd_elements.length}; location: ${ltd_tr}");
                 domainElement["icu"] = ltd_elements[ltd_tr];
                 break;
             default:
